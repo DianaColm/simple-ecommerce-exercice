@@ -23,18 +23,29 @@ function createProductHTML(product) {
   productContainer.className = "col text-center";
   productContainer.innerHTML = template;
   return productContainer;
+  addToCart(product);
 }
 
 drawProducts(data);
 
-function addToCart() {
+function addToCart(product) {
+  // var contador = 0
+  // function incrementar() {
+  // if(contador==5)
+  // alert('Maximo permitido alcanzado: 5');
+  // else {
+  // contador++;
+  alert('El contador ahora vale :');
+  }
+//   console.log(contador);
+// }
+// }
   /* cuando agrego a carrito, tengo que:
   1) Incrementar en uno mi contador del menu
   2) Guardar mi producto en algun lugar
   3) Cambiar el boton de agregar a carrito
   por quitar del carrito
   */
-}
 
 function removeFromCart() {
   /* cuando agrego a carrito, tengo que:
@@ -63,3 +74,12 @@ function changeButtonStatus(button) {
     Y viceversa
   */
 }
+
+localStorage.setItem("info", JSON.stringify(data));
+var information = localStorage.getItem("info");
+console.log(information);
+var information2 = (JSON.parse(information));
+console.log(information2);
+
+var newData = information2.products;
+console.log(newData[0].id);

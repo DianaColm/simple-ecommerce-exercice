@@ -44,3 +44,9 @@ var data = {
     }
   ]
 };
+
+/*localStorage.setItem("information2", JSON.stringify(data.products));
+var extraerInfo = localStorage.getItem("information2", );
+// console.log(extraerInfo);
+console.log('Objeto obtenido :', JSON.parse(extraerInfo)[2]);
+*/
